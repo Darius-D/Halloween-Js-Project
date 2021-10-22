@@ -74,8 +74,22 @@ section{
     flex-direction: column;
     width: 100%;
 }
-
+.grey_button{
+    background: grey;
+}
+.green_button{
+    background: green;
+}
 .selection{
+    display: flex;
+    flex-wrap: wrap;
+    background:rgb(75, 74, 74);
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: none;
+}
+.show{
+    display: unset;
     display: flex;
     flex-wrap: wrap;
     background:rgb(75, 74, 74);
