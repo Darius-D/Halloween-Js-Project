@@ -1,0 +1,92 @@
+* {
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: lightgray;
+    
+    display: grid;
+    grid-template-rows: 3fr .5fr 1fr;
+}
+.container {
+    border: solid black 1px;
+
+    display: grid;
+    grid-template-rows: .10fr 1fr;
+    width: 100%;
+    
+}
+.title{
+    width: 100%;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(65, 63, 63);
+
+    color: orange;
+    -webkit-text-stroke: 2px black; /* width and color */
+
+    font-size: 2em;
+}
+#scarecrow{
+    max-width: 40px;
+    max-height: 40px;
+}
+.image{
+    width: 100%;
+    
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/Images/pumkinpatch.jpg);
+    background-size: cover;
+    background-position-y: bottom;
+
+}
+section{
+    display: flex;
+    border: black 1px solid;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.top-section{
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.selection{
+    display: flex;
+    flex-wrap: wrap;
+    background:rgb(75, 74, 74);
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+button{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 1em;
+    background-color: orange;
+    font-weight: bold;
+}

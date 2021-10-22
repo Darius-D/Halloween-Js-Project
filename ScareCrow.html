@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ScareCrow.css">
+    <title>Scarecrow</title>
+</head>
+<body>
+    <main class="container">
+
+        <div class="title">
+            <h1 class="sc"> <img  id="scarecrow" src="/Images/scarecrow.png">  Scarecrow <img  id="scarecrow" src="/Images/scarecrow.png"> </h1>
+        </div>
+
+        <div class="image">
+            <!-- Insert various images -->
+            <img id="img-el" src="/Images/pumkinpatch.jpg" alt="scarecrow-pic">
+        </div>
+
+    </main>
+
+    <section class="top-section" id="word-el">
+        <div id="secret-el">
+            <input id="secretWord">: Enter your word or Phrase.
+            <input type="submit" onclick="grabSecret()" value="Start">
+        </div>
+    </section>
+
+    <section id="letter-el" class="selection">
+        <button onclick="getLetter('A')">A</button> <button onclick="getLetter('B')">B</button>
+        <button onclick="getLetter('C')">C</button> <button onclick="getLetter('D')">D</button>
+        <button onclick="getLetter('E')">E</button> <button onclick="getLetter('F')">F</button>
+        <button onclick="getLetter('G')">G</button> <button onclick="getLetter('H')">H</button>
+        <button onclick="getLetter('I')">I</button> <button onclick="getLetter('J')">J</button>
+        <button onclick="getLetter('K')">K</button> <button onclick="getLetter('L')">L</button>
+        <button onclick="getLetter('M')">M</button> <button onclick="getLetter('N')">N</button>
+        <button onclick="getLetter('O')">O</button> <button onclick="getLetter('P')">P</button>
+        <button onclick="getLetter('Q')">Q</button> <button onclick="getLetter('R')">R</button>
+        <button onclick="getLetter('S')">S</button> <button onclick="getLetter('T')">T</button>
+        <button onclick="getLetter('U')">U</button> <button onclick="getLetter('V')">V</button>
+        <button onclick="getLetter('W')">W</button> <button onclick="getLetter('X')">X</button>
+        <button onclick="getLetter('Y')">Y</button> <button onclick="getLetter('Z')">Z</button>
+    </section>
+<script type="text/javascript" src="/ScareCrow.js"></script>
+</body>
+</html>
