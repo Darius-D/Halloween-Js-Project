@@ -34,7 +34,6 @@ function wordCreator(){
     console.log("Answer Array output: " + answer)
     return spaces
 }
-
 /* this function takes in the word and places it into an array
 for easier searching and presentation. */
 function secretToArray(){
@@ -43,7 +42,6 @@ function secretToArray(){
         wordArray[i] = secretWord[i]
     }
 }
-
 function displaySelectedLetters(letter){
 
     for(let i = 0; i <wordArray.length; i++){
@@ -63,7 +61,6 @@ function displaySelectedLetters(letter){
     
     return answerString
 }
-
 function getLetter(element){
     
     let letter = document.getElementById(element).textContent
@@ -115,12 +112,17 @@ function displayBoard(){
 function checkGameStatus(){
 if(attemptsLeft <= 0){
     gameOver = true
+    let bck = document.querySelector(".top-section").className += ", red_back"
 }
 for(let i = 0; i < answer.length; i++){
     if(!answer.includes(" _ ")){
         solved = true;
     }
 }
+if(solved){
+    let bck = document.querySelector(".top-section").className += ", green_back"
+}
+
 }
 function decreaseAttemptRemaining(){
     attemptsLeft --

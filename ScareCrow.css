@@ -96,6 +96,12 @@ section{
     grid-row-start: 3;
     grid-row-end: 4;
 }
+.green_back{
+    background: green;
+}
+.red_back{
+    background: red;
+}
 button{
     width: 60px;
     height: 60px;
