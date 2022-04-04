@@ -76,6 +76,7 @@ function getLetter(element){
      checkGameStatus()
      console.log("Attempts left" +attemptsLeft + "Solved" + solved)
 }
+
 function startGame(){
     contents = document.querySelector("#secret-el")
     contents.innerHTML = 
@@ -84,6 +85,7 @@ function startGame(){
     displayBoard()
     gameOver = false;
 }
+
 /* This function grabs the user input and assigns the value
 to the "Secretword variable and then starts the game and displays the board." */
 function grabSecret(){
@@ -93,6 +95,7 @@ function grabSecret(){
     wordCreator();
     startGame();
 }
+
 /* This function makes the buttons either green on grey to assit
 in the identification of which buttons were pressed already */
 function changeButtonColor(element,status){
@@ -103,17 +106,27 @@ function changeButtonColor(element,status){
         decreaseAttemptRemaining()
     }
 }
+
 /* Changes the display of the letter buttons to unset from none
 This allows the keys to be hidden until tha game starts */
 function displayBoard(){
     let contents = document.querySelector("#letter-el")
     contents.className = "show"
 }
+
 function checkGameStatus(){
 if(attemptsLeft <= 0){
     gameOver = true
     let bck = document.querySelector(".top-section").className += ", red_back"
+    let response = prompt(`Sorry Game over! The answer was '${secretWord}'. Would you like to try again? yes or no?` )
+
+    if(response === "yes")
+    {
+        window.location.reload()
+    }
+    
 }
+
 for(let i = 0; i < answer.length; i++){
     if(!answer.includes(" _ ")){
         solved = true;
@@ -124,6 +137,7 @@ if(solved){
 }
 
 }
+
 function decreaseAttemptRemaining(){
     attemptsLeft --
 }
